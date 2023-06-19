@@ -626,7 +626,6 @@ class Extractor:
         """
         results: List[str] = []
         cand: ResultSet = soup.select_one('div.cn-case-body').find_all('p', recursive=False)
-        print(cand)
         i: int = 0
         while i < len(cand):
             if re.sub(r'\s+', '', cand[i].text) == '주문':

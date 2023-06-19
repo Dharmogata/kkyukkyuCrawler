@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="kkyukkyuCrawler",
-    version="1.0.1",
+    version="1.1.0",
     author="eik4862",
     author_email="lkd1962@naver.com",
     description="law case crawling lib",
