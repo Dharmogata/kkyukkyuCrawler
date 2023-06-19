@@ -577,11 +577,9 @@ class Extractor:
         :rtype: str
         """
         title: str = soup.select_one('div.cn-case-title > h1').text.strip()
-        trim_pos = title.find('판결')
-        if trim_pos == -1:
-            trim_pos = title.find('결정')
+        trim_pos = title.find('[')
         assert trim_pos != -1
-        return cls._prettify(title[:trim_pos + 2])
+        return cls._prettify(title[:trim_pos - 1])
 
     @classmethod
     def _parse_issues(cls, soup: BeautifulSoup) -> Optional[List[str]]:
@@ -628,9 +626,10 @@ class Extractor:
         """
         results: List[str] = []
         cand: ResultSet = soup.select_one('div.cn-case-body').find_all('p', recursive=False)
+        print(cand)
         i: int = 0
         while i < len(cand):
-            if re.sub(r'\s{2,}', '', cand[i].text) == '주문':
+            if re.sub(r'\s+', '', cand[i].text) == '주문':
                 break
             i += 1
         assert i + 1 < len(cand)
