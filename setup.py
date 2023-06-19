@@ -5,13 +5,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="kkyukkyuCrawler",
-    version="1.0.0",
+    version="1.0.1",
     author="eik4862",
     author_email="lkd1962@naver.com",
     description="law case crawling lib",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="",
+    url="https://github.com/eik4862/kkyukkyuCrawler",
     project_urls={},
     classifiers=[
         "Programming Language :: Python :: 3",

@@ -26,7 +26,7 @@ class Case:
         - _issues: 판시/결정사항
         - _summaries: 판결/결정요지
         - _results: 주문
-        - _claims: 청구/항소/반소취지 등
+        - _claims: 청구/항소/반소 등 취지
         - _reasons: 이유
         - _src: The URL used for the GET request to obtain case data
     """
