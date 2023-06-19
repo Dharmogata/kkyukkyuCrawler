@@ -235,6 +235,7 @@ class Extractor:
                             break
                         else:
                             cases[j].add_ref_pg_no(pg_no)
+                            break
                     j += 1
                 if j == len(cases):
                     cases.append(Case(_id, pg_no))
